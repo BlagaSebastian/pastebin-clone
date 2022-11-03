@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Pastebin</title>
+</head>
+<body>
+<div>
+    <nav class="navbar navbar-dark bg-primary">
+        <span class="navbar-brand mb-0 h1">Pastebin</span>
+        <form class="d-flex" th:action="@{/register}">
+            <button class="btn btn-dark" type="submit">Register</button>
+        </form>
+        <form class="d-flex" th:action="@{/paste}">
+            <button class="btn btn-dark" type="submit">Log in</button>
+        </form>
+    </nav>
+    <br><br>
+    <div align="center">
+        <h1>Welcome to my Pastebin-clone</h1>
+    </div>
+</div>
+</body>
+</html>
