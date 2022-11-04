@@ -29,24 +29,24 @@ public class pasteController {
         return "pastePage";
     }
 
-    @GetMapping("/add/paste")
+    @GetMapping("/paste/add")
     public String addPaste(Model model) {
         model.addAttribute("paste", new Paste());
         return "addPastePage";
     }
-    @PostMapping(value = "save/paste")
+    @PostMapping(value = "paste/save")
     public String savePaste(@ModelAttribute("paste") Paste paste) {
         pasteService.savePaste(paste);
         return "redirect:/paste";
     }
 
-    @RequestMapping("delete/paste/{pasteId}")
+    @RequestMapping("paste/delete/{pasteId}")
     public String deletePaste(@PathVariable(name = "pasteId") int pasteId) {
         pasteService.deletePasteById(pasteId);
         return "redirect:/paste";
     }
 
-    @RequestMapping("edit/paste/{pasteId}")
+    @RequestMapping("paste/edit/{pasteId}")
     public String editPaste(@PathVariable(name = "pasteId") int pasteId, Model model) {
         model.addAttribute("paste", pasteService.getPasteById(pasteId));
         return "editPaste";
