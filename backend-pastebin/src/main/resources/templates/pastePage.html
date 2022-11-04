@@ -34,10 +34,10 @@
               <td th:text="${paste.title}">Title</td>
               <td th:text="${paste.author}">Author</td>
               <td th:text="${paste.content}">Content</td>
-              <td><form th:action="@{'/edit/paste/' + ${paste.pasteId}}">
+              <td><form th:action="@{'/paste/edit/' + ${paste.pasteId}}">
                 <button class="btn btn-primary" type="submit">Edit</button>
               </form></td>
-              <td><form th:action="@{'/delete/paste/' + ${paste.pasteId}}">
+              <td><form th:action="@{'/paste/delete/' + ${paste.pasteId}}">
                 <button class="btn btn-danger" type="submit">Delete</button>
               </form></td>
             </tr>
