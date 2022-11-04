@@ -48,9 +48,9 @@ public class CustomSpringSecurity extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
                 .antMatchers("/paste").authenticated()
-                .antMatchers("/add/paste").authenticated()
-                .antMatchers("save/paste").authenticated()
-                .antMatchers("edit/paste/**").authenticated()
+                .antMatchers("/paste/add").authenticated()
+                .antMatchers("paste/save").authenticated()
+                .antMatchers("paste/edit").authenticated()
                 .anyRequest().permitAll()
                 .and()
                 .formLogin()
